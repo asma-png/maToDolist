@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.toodoolist.HelloController"
+      alignment="TOP_CENTER"
+      spacing="20.0"
+      prefWidth="400"
+      prefHeight="400">
+
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <Label text="Ma To-Do List"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="inputField" promptText="Enter a Task here..." />
+
+    <HBox spacing="10">
+        <Button text="Add" onAction="#addTask" />
+        <Button text="Edit" onAction="#editTask" />
+        <Button text="Delete" onAction="#removeTask" />
+    </HBox>
+
+    <ListView fx:id="taskListView" prefHeight="250" />
+</VBox>
+
